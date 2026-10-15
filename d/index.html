@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Palm Desert weighs a citywide AI policy for staff and officials</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@500;600&display=swap">
+<style>
+:root {
+  --paper: #F1F4F3;
+  --surface: #FFFFFF;
+  --ink: #15232A;
+  --muted: #51636B;
+  --rule: #C7D1D4;
+  --accent: #0D6379;
+  --tint: #E1EDF0;
+  --serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --sans: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1A1F;
+    --surface: #15252C;
+    --ink: #E5EDEF;
+    --muted: #9DB0B7;
+    --rule: #2C4048;
+    --accent: #6CC4DB;
+    --tint: #17303A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1A1F;
+  --surface: #15252C;
+  --ink: #E5EDEF;
+  --muted: #9DB0B7;
+  --rule: #2C4048;
+  --accent: #6CC4DB;
+  --tint: #17303A;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  padding-inline: 16px;
+  padding-block: 0;
+}
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wrap {
+  max-width: 40rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding-block: 1rem 3.5rem;
+}
+.wrap > * { min-width: 0; }
+
+.mast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0.7rem;
+  font: 600 0.75rem var(--sans);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.mast .date { color: var(--muted); }
+
+article { display: flex; flex-direction: column; gap: 1rem; }
+.kicker {
+  margin: 0;
+  font: 600 0.75rem var(--sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.9rem, 6.2vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.dek { margin: 0; font-size: 1.2rem; line-height: 1.45; font-style: italic; color: var(--muted); }
+.byline { margin: 0; font: 500 0.82rem var(--sans); color: var(--muted); }
+
+.takeaways { background: var(--tint); padding: 0.9rem 1.1rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.under { margin: -0.25rem 0 0; font-size: 0.98rem; line-height: 1.5; }
+.eb-line { margin: 0.15rem 0 0; font: 400 0.82rem/1.5 var(--sans); color: var(--muted); }
+.eb { font: 600 0.66rem var(--sans); letter-spacing: 0.12em; text-transform: uppercase; margin-right: 0.35rem; }
+.takeaways h2 { margin: 0; font: 600 0.75rem var(--sans); letter-spacing: 0.1em; text-transform: uppercase; }
+.takeaways ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+
+.body { display: flex; flex-direction: column; gap: 1rem; }
+.body p { margin: 0; max-width: 65ch; }
+
+.facts {
+  margin: 0.5rem 0 0;
+  padding-block: 0.9rem;
+  border-block: 1px solid var(--rule);
+  display: grid;
+  gap: 0.55rem;
+}
+.facts > div { display: grid; grid-template-columns: 7rem 1fr; gap: 0.75rem; }
+.facts dt { font: 600 0.72rem var(--sans); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); padding-top: 0.2rem; }
+.facts dd { margin: 0; min-width: 0; }
+
+.sources { font: 400 0.85rem/1.5 var(--sans); color: var(--muted); }
+.sources p { margin: 0 0 0.25rem; font-weight: 600; }
+.sources ul { margin: 0; padding-left: 1.1rem; }
+
+.listing {
+  background: var(--surface);
+  border: 1.5px dashed var(--muted);
+  padding: 1.1rem 1.25rem 1.25rem;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.listing-head { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.75rem; }
+.chip {
+  margin: 0;
+  font: 600 0.7rem var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.25rem 0.55rem;
+}
+.paid { font: 500 0.78rem var(--sans); color: var(--muted); }
+.listing h2 { margin: 0; font-weight: 600; font-size: 1.4rem; line-height: 1.2; }
+.rows { margin: 0; display: grid; gap: 0.55rem; }
+.rows > div {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.75rem;
+  border-top: 1px dotted var(--rule);
+  padding-top: 0.55rem;
+}
+.rows dt { font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 0.25rem; }
+.rows dd { margin: 0; min-width: 0; }
+.note { margin: 0; font: 400 0.82rem/1.5 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.7rem; display: grid; gap: 0.4rem; }
+.note p { margin: 0; }
+
+.record { font-family: var(--mono); font-size: 0.8rem; line-height: 1.55; border-left: 3px solid var(--rule); padding-left: 1rem; }
+.record h2 { margin: 0 0 0.25rem; font: 600 0.75rem var(--sans); letter-spacing: 0.09em; text-transform: uppercase; }
+.record p { margin: 0 0 0.6rem; color: var(--muted); }
+.record dl { margin: 0; display: grid; gap: 0.2rem; }
+.record dl > div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0.75rem; }
+.record dt { color: var(--muted); }
+.record dd { margin: 0; min-width: 0; }
+
+@media (max-width: 30rem) {
+  .facts > div, .rows > div, .record dl > div { grid-template-columns: 1fr; gap: 0.1rem; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="mast">
+      <span>Palm Desert news summary</span>
+      <span class="date">Wednesday, October 7, 2026</span>
+    </div>
+  </header>
+
+  <article itemscope itemtype="https://schema.org/NewsArticle">
+    <p class="kicker">Government · Palm Desert</p>
+    <h1 itemprop="headline">Palm Desert weighs a citywide AI policy for staff and officials</h1>
+    <p class="dek" itemprop="description">Thursday's council agenda includes a risk-tiered framework that replaces interim guidance and gives the city's AI officer an administrative role.</p>
+    <p class="byline">Summary of public reporting · <time itemprop="datePublished" datetime="2026-10-07">Oct. 7, 2026</time></p>
+
+    <div class="takeaways">
+      <h2>Key takeaways</h2>
+      <ul>
+        <li>The Palm Desert City Council is scheduled to consider a citywide AI policy at 4 p.m. Thursday, Oct. 8.</li>
+        <li>The policy sorts AI uses into three risk tiers. Moderate- and high-risk uses need sign-off from a department director or the city manager.</li>
+        <li>If approved, the policy takes effect immediately.</li>
+      </ul>
+    </div>
+
+    <p class="under" itemscope itemtype="https://schema.org/Organization"><strong itemprop="name">AICV (AI Coachella Valley)</strong>: <span itemprop="description">AI training and in-person events across the Coachella Valley, including hands-on AI workshops in English and Spanish at CSUSB Palm Desert. Founded 2025. Hours: not listed.</span></p>
+
+    <div class="body" itemprop="articleBody">
+      <p>The Palm Desert City Council is scheduled to consider a citywide artificial intelligence policy at its regular meeting at 4 p.m. Thursday, Oct. 8. If the council approves it, the policy takes effect immediately.</p>
+      <p>The policy would replace interim guidance that focused mainly on generative AI during the city's early experimentation. City officials drafted the broader framework after creating an Artificial Intelligence Officer position in March 2026. That officer would administer the policy and the city's AI governance and risk classification program.</p>
+      <p>The policy sorts AI uses into three risk tiers. Routine use of city-approved tools would be allowed for city employees, a group that includes interns, volunteers, and elected and appointed officials. Moderate- and high-risk uses need sign-off from a department director or the city manager. According to the staff report, those uses include accessing sensitive or restricted city information, communicating or acting independently without prior human approval, and taking an autonomous action that creates a legal or financial commitment for the city.</p>
+      <p>The policy also bars using AI to fabricate or falsify a city record or communication, to falsely attribute a statement or action to a real person or to the city, or to get around city security controls and required approvals.</p>
+      <p>Patch reported that the framework centers on human accountability, transparent public interactions and a risk-based approval process.</p>
+    </div>
+
+    <dl class="facts">
+      <div><dt>When</dt><dd>Thursday, Oct. 8, 4 p.m.</dd></div>
+      <div><dt>Where</dt><dd>City Hall, 73-510 Fred Waring Drive, Palm Desert</dd></div>
+      <div><dt>If approved</dt><dd>Takes effect immediately</dd></div>
+    </dl>
+
+    <div class="sources">
+      <p>Sources:</p>
+      <ul>
+        <li><a href="https://kesq.com/news/2026/10/06/palm-desert-city-council-to-consider-adopting-ai-policy-for-city-work/" target="_blank" rel="noopener">KESQ, Oct. 6, 2026</a></li>
+        <li><a href="https://patch.com/california/palmdesert/palm-desert-looks-adopt-new-ai-policy" target="_blank" rel="noopener">Patch, Oct. 6, 2026</a></li>
+        <li><a href="https://www.nbcpalmsprings.com/local-and-community/2026/10/07/palm-desert-city-council-to-consider-adopting-ai-policy-for-city-work" target="_blank" rel="noopener">NBC Palm Springs, City News Service, Oct. 7, 2026</a></li>
+      </ul>
+    </div>
+
+  </article>
+</main>
+</body>
+</html>
