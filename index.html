@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Decision Intercept Mockup</title>
+<title>Palm Desert weighs a citywide AI policy for staff and officials</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@500;600&display=swap">
 <style>
-/* Layout: one 40rem editorial column. The sponsored listing sits in its own classified-style bay after the story and sources, never inside the article. */
+/* Layout: one 40rem editorial column. Key takeaways stay editorial. The sponsored listing is a separate labeled block at the end of the article container. */
 :root {
   --paper: #F1F4F3;
   --surface: #FFFFFF;
@@ -65,14 +65,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 }
 .wrap > * { min-width: 0; }
 
-.mock {
-  font: 500 0.78rem/1.45 var(--sans);
-  background: var(--tint);
-  border: 1px solid var(--rule);
-  padding: 0.6rem 0.8rem;
-  margin: 0;
-}
-
 .mast {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +77,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
-.mast .ph { border: 1px dashed var(--muted); padding: 0.15rem 0.55rem; }
 .mast .date { color: var(--muted); }
 
 article { display: flex; flex-direction: column; gap: 1rem; }
@@ -106,6 +97,11 @@ h1 {
 }
 .dek { margin: 0; font-size: 1.2rem; line-height: 1.45; font-style: italic; color: var(--muted); }
 .byline { margin: 0; font: 500 0.82rem var(--sans); color: var(--muted); }
+
+.takeaways { background: var(--tint); padding: 0.9rem 1.1rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.takeaways h2 { margin: 0; font: 600 0.75rem var(--sans); letter-spacing: 0.1em; text-transform: uppercase; }
+.takeaways ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+
 .body { display: flex; flex-direction: column; gap: 1rem; }
 .body p { margin: 0; max-width: 65ch; }
 
@@ -129,6 +125,7 @@ h1 {
   background: var(--surface);
   border: 1.5px dashed var(--muted);
   padding: 1.1rem 1.25rem 1.25rem;
+  margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -155,7 +152,8 @@ h1 {
 }
 .rows dt { font: 500 0.72rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 0.25rem; }
 .rows dd { margin: 0; min-width: 0; }
-.note { margin: 0; font: 400 0.82rem/1.5 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.7rem; }
+.note { margin: 0; font: 400 0.82rem/1.5 var(--sans); color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.7rem; display: grid; gap: 0.4rem; }
+.note p { margin: 0; }
 
 .record { font-family: var(--mono); font-size: 0.8rem; line-height: 1.55; border-left: 3px solid var(--rule); padding-left: 1rem; }
 .record h2 { margin: 0 0 0.25rem; font: 600 0.75rem var(--sans); letter-spacing: 0.09em; text-transform: uppercase; }
@@ -169,13 +167,12 @@ h1 {
   .facts > div, .rows > div, .record dl > div { grid-template-columns: 1fr; gap: 0.1rem; }
 }
 </style>
-
 </head>
 <body>
 <main class="wrap">
-  <header style="display:flex;flex-direction:column;gap:1rem">
+  <header>
     <div class="mast">
-      <span class="ph">Publisher masthead</span>
+      <span>Palm Desert news summary</span>
       <span class="date">Wednesday, October 7, 2026</span>
     </div>
   </header>
@@ -184,7 +181,16 @@ h1 {
     <p class="kicker">Government · Palm Desert</p>
     <h1 itemprop="headline">Palm Desert weighs a citywide AI policy for staff and officials</h1>
     <p class="dek" itemprop="description">Thursday's council agenda includes a risk-tiered framework that replaces interim guidance and gives the city's AI officer an administrative role.</p>
-    <p class="byline">By <span itemprop="author">[Author name]</span> · <time itemprop="datePublished" datetime="2026-10-07">Oct. 7, 2026</time></p>
+    <p class="byline">Summary of public reporting · <time itemprop="datePublished" datetime="2026-10-07">Oct. 7, 2026</time></p>
+
+    <div class="takeaways">
+      <h2>Key takeaways</h2>
+      <ul>
+        <li>The Palm Desert City Council is scheduled to consider a citywide AI policy at 4 p.m. Thursday, Oct. 8.</li>
+        <li>The policy sorts AI uses into three risk tiers. Moderate- and high-risk uses need sign-off from a department director or the city manager.</li>
+        <li>If approved, the policy takes effect immediately.</li>
+      </ul>
+    </div>
 
     <div class="body" itemprop="articleBody">
       <p>The Palm Desert City Council is scheduled to consider a citywide artificial intelligence policy at its regular meeting at 4 p.m. Thursday, Oct. 8. If the council approves it, the policy takes effect immediately.</p>
@@ -208,38 +214,43 @@ h1 {
         <li><a href="https://www.nbcpalmsprings.com/local-and-community/2026/10/07/palm-desert-city-council-to-consider-adopting-ai-policy-for-city-work" target="_blank" rel="noopener">NBC Palm Springs, City News Service, Oct. 7, 2026</a></li>
       </ul>
     </div>
+
+    <aside class="listing" aria-labelledby="sp-label" itemscope itemtype="https://schema.org/Organization">
+      <div class="listing-head">
+        <p class="chip" id="sp-label">Sponsored listing</p>
+        <span class="paid">Sponsored placement, not newsroom content</span>
+      </div>
+      <h2 itemprop="name">AICV (AI Coachella Valley)</h2>
+      <dl class="rows">
+        <div><dt>What it is</dt><dd itemprop="description">AI training and in-person events across the Coachella Valley. A fiscally sponsored project of Desert Community Foundation.</dd></div>
+        <div><dt>Offers</dt><dd>Hands-on AI workshops in English and Spanish at CSUSB Palm Desert; AI Tinkerers Coachella Valley meetups</dd></div>
+        <div><dt>Serves</dt><dd itemprop="areaServed">Coachella Valley, CA</dd></div>
+        <div><dt>Founded</dt><dd><time itemprop="foundingDate" datetime="2025">2025</time></dd></div>
+        <div><dt>Hours</dt><dd>Not listed</dd></div>
+        <div><dt>Verified</dt><dd><time datetime="2026-10-15">Oct. 15, 2026</time> · <a href="#record">Sponsor record</a></dd></div>
+      </dl>
+      <div class="note">
+        <p>The sponsor had no role in, and no advance view of, the story above.</p>
+        <p>Disclosure: the sponsor and the publisher of this page are the same organization. This listing is part of a test of how AI tools read sponsored placements.</p>
+      </div>
+    </aside>
+
+    <section class="record" id="record">
+      <h2>Sponsor record</h2>
+      <p>Linked from the listing. Same facts, plain text, dated.</p>
+      <dl>
+        <div><dt>Sponsor</dt><dd>AICV (AI Coachella Valley)</dd></div>
+        <div><dt>Type</dt><dd>AI training and in-person events; fiscally sponsored project of Desert Community Foundation</dd></div>
+        <div><dt>Offers</dt><dd>Hands-on AI workshops in English and Spanish at CSUSB Palm Desert; AI Tinkerers Coachella Valley meetups</dd></div>
+        <div><dt>Serves</dt><dd>Coachella Valley, CA</dd></div>
+        <div><dt>Founded</dt><dd>2025</dd></div>
+        <div><dt>Hours</dt><dd>Not listed</dd></div>
+        <div><dt>Relationship</dt><dd>Same organization as the publisher of this page</dd></div>
+        <div><dt>Placement</dt><dd>Sponsored listing under the Palm Desert AI policy story, Oct. 7, 2026</dd></div>
+        <div><dt>Last verified</dt><dd>Oct. 15, 2026, against the sponsor's public website</dd></div>
+      </dl>
+    </section>
   </article>
-
-  <aside class="listing" aria-labelledby="sp-label" itemscope itemtype="https://schema.org/LocalBusiness">
-    <div class="listing-head">
-      <p class="chip" id="sp-label">Sponsored listing</p>
-      <span class="paid">Paid placement, not newsroom content</span>
-    </div>
-    <h2 itemprop="name">Example Desert Advisory</h2>
-    <dl class="rows">
-      <div><dt>What it is</dt><dd itemprop="description">Independent AI training firm for small businesses. Offers staff AI-use training and written AI policy templates.</dd></div>
-      <div><dt>Where</dt><dd itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Palm Desert</span>, <span itemprop="addressRegion">CA</span></dd></div>
-      <div><dt>Founded</dt><dd><time itemprop="foundingDate" datetime="2019">2019</time></dd></div>
-      <div><dt>Hours</dt><dd><span itemprop="openingHours" content="Mo-Fr 09:00-17:00">Monday to Friday, 9 a.m. to 5 p.m.</span></dd></div>
-      <div><dt>Verified</dt><dd><time datetime="2026-10-07">Oct. 7, 2026</time> · <a href="#record">Sponsor record</a></dd></div>
-    </dl>
-    <p class="note">The sponsor had no role in, and no advance view of, the story above. The publisher chose this placement for topic relevance.</p>
-  </aside>
-
-  <section class="record" id="record">
-    <h2>Sponsor record</h2>
-    <p>Linked from the listing. Same facts, plain text, dated.</p>
-    <dl>
-      <div><dt>Sponsor</dt><dd>Example Desert Advisory</dd></div>
-      <div><dt>Type</dt><dd>Independent AI training firm for small businesses</dd></div>
-      <div><dt>Offers</dt><dd>Staff AI-use training; written AI policy templates</dd></div>
-      <div><dt>Location</dt><dd>Palm Desert, CA</dd></div>
-      <div><dt>Founded</dt><dd>2019</dd></div>
-      <div><dt>Hours</dt><dd>Monday to Friday, 9 a.m. to 5 p.m.</dd></div>
-      <div><dt>Placement</dt><dd>Sponsored listing under the Palm Desert AI policy story, Oct. 7, 2026</dd></div>
-      <div><dt>Last verified</dt><dd>Oct. 7, 2026</dd></div>
-    </dl>
-  </section>
 </main>
 </body>
 </html>
